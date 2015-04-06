@@ -1,6 +1,15 @@
+# Movie Trailer Project
+# Crouse, Matthew
+# 
+# Creates an array of movies that are then passed to fresh_tomatoes.py which generates server-side html
+# and produces a working movie trailer page.
+# 
+# @uses class Movie() defined in media.py
+
 import media
 import fresh_tomatoes
 
+# create an instance of Movie called guard_galaxy
 guard_galaxy = media.Movie ( 
     "Guardians Of The Galaxy",
     "A group of intergalactic criminals are forced to work together to stop a fanatical warrior "+
@@ -9,6 +18,7 @@ guard_galaxy = media.Movie (
     "www.youtube.com/watch?v=B16Bo47KS2g"
     )
 
+# create an instance of Movie called avatar
 avatar = media.Movie (
     "Avatar",
     "A Paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between "+
@@ -17,8 +27,7 @@ avatar = media.Movie (
     "https://www.youtube.com/watch?v=cRdxXPV9GNQ"
     )
 
-
-
+# create an instance of Movie called school_of_rock
 school_of_rock = media.Movie(
     "School of Rock",
     "Overly enthusiastic guitarist Dewey Finn (Jack Black) Poses as a substitute music"+
@@ -28,6 +37,7 @@ school_of_rock = media.Movie(
     "http://www.youtube.com/watch?v=XCwy6lW5Ixc"
     )
 
+# create an instance of Movie called shawshank
 shawshank = media.Movie(
     "Shawshanke Redemption",
     "Adapted from the Stephen King novella Rita Hayworth and Shawshank Redemption, the film "+
@@ -37,6 +47,7 @@ shawshank = media.Movie(
         "._V1_SX214_AL_.jpg",
     "https://www.youtube.com/watch?v=NmzuHjWmXOc")
 
+# create an instance of Movie called fith
 fith = media.Movie( 
     "The Fifth Element",
     "In the 23rd century, a New York City cabbie, Korben Dallas, finds the fate of the world "+
@@ -47,6 +58,7 @@ fith = media.Movie(
     "www.youtube.com/watch?v=VkX7dHjL-aY"
                     )
 
+# create an instance of Movie called exam
 exam = media.Movie( 
     "Exam",
     "The final candidates for a highly desirable corporate job are locked together in an "+
@@ -55,6 +67,8 @@ exam = media.Movie(
         "SY317_CR0,0,214,317_AL_.jpg",
     "www.youtube.com/watch?v=bkdt2Sygew0")
 
-
+# store an array of movie instances in a variable called movies
 movies =[guard_galaxy, avatar, school_of_rock, shawshank, fith, exam]
+
+# pass the array of movies to another file called fresh_tomatoes.
 fresh_tomatoes.open_movies_page(movies)
